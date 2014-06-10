@@ -3,7 +3,7 @@ MAINTAINER Bibek Shrestha, bibekshrestha@gmail.com
 
 ENV RACK_ENV production
 WORKDIR /app
-COPY . /app
+ADD . /app
 
 VOLUME ["/data", "/log"]
 EXPOSE 4567
