@@ -11,7 +11,7 @@ section#todays-papers
       - paper_names.each do |paper_name|
         .span2
           div
-            a href="/pdf/#{paper_name}/#{date.to_s}.pdf" target="_blank" 
+            a href="/pdf/#{paper_name}/#{date.to_s}.pdf" target="_blank" data-paper-name="#{paper_name}"
               img src="/thumbnail/#{paper_name}/#{date.to_s}.png" /
 
 / section#all-papers.show-grid
@@ -33,3 +33,10 @@ section#footer
     br/
     | Get in touch with me in
     a href="http://twitter.com/bibstha" target="_blank"  Twitter
+
+javascript:
+  $(document).ready(function() {
+    $('#todays-papers a').on('click', function() {
+      ga('send', 'event', 'paper', 'open', $(this).data('paper-name'));
+    });
+  })

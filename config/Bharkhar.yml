@@ -19,8 +19,8 @@ development: &development
       class_name: Dummy
       enabled: false
 
-  pdf_write_dir: lib/webapp/public/pdf
-  thumbnail_write_dir: lib/webapp/public/thumbnail
+  pdf_write_dir: app/public/pdf
+  thumbnail_write_dir: app/public/thumbnail
   tmp_dir: tmp
 
 
